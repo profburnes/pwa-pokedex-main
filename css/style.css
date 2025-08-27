@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #f1f1f1;
+    font: 18px Tahoma, Verdana, Arial;
+    color: #333;
+}
+
+.header, .footer {
+    background: #333;
+    text-align: center;
+    color: #FFF;
+    padding: 20px 0 20px 0;
+    nav {
+        display: inline-block;
+        margin-top: 30px;
+        .btn {
+            background: #F00;
+            color: #FFF;
+            margin: 10px;
+            padding: 10px;
+            text-decoration: none;
+            &:hover {
+                background-color: #000;
+                color: #FFF;
+            }
+        }
+    }
+}
+
+.container {
+    width: 1000px;
+    margin: 20px auto;
+    .row {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+        .card {
+            border: 1px solid #ccc;
+            margin: 5px;
+            padding: 10px;
+            box-sizing: border-box;
+            background: #FFF;
+            text-align: center;
+        }
+    }
+    .text-center {
+        text-align: center;
+    }
+}
+
+#install-banner {
+    width: 100%;
+    position: fixed;
+    text-align: center;
+    top: 300px;
+    z-index: 99;
+    display: none; 
+    background: #000;
+    color: #FFF; 
+    padding: 1em; 
+    border: 1px solid #ccc;
+    #install-btn {
+        background: #F00;
+        color: #FFF;
+        border: 0;
+        padding: 15px 3px;
+        display: inline-block;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        img {
+            width: 80%;
+        }
+        .btn {
+            width: 100%;
+            display: block;
+        }
+    }
+    .container {
+        width: 80%;
+        img {
+            width: 100%;
+        }
+    }
+    .row {
+        display: grid;
+        grid-template-columns: 100% !important;
+    }
+}
